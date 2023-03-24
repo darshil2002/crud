@@ -1,6 +1,6 @@
 <div id="myDiv">
 
-    <button type="button" class="btn btn-primary">Add People</button>
+    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal" >Add People</button>
     
     <form>
         <div class="mb-3">
@@ -11,63 +11,81 @@
 </div>
 
 <!-- now -->
-
-
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-    Launch demo modal
-  </button>
-  
   <!-- Modal -->
   <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
           <h1 class="modal-title fs-5" id="exampleModalLabel">Employee Information</h1>
-          <button type="button" class="btn-close" ></button>
+ 
         </div>
         <div class="modal-body">
           <!-- our form starts here -->
 
-            <form>
+            <form [formGroup]="loginForm" (ngSubmit)="formSubmit()" >
                 <div class="row">
                     <div class="col">
-                        <input type="text" class="form-control" placeholder="First Name">
+                        <input type="text" class="form-control" placeholder="First Name" formControlName="firstName">
                     </div>
                     <div class="col">
-                        <input type="text" class="form-control" placeholder="last Name">
+                        <input type="text" class="form-control" placeholder="last Name"
+                        formControlName="lastName">
                     </div>
                 </div>
 
                 <div class="row">
                   <div class="col">
                     <label for="datepicker">Birth Date:</label>
-                    <input type="date" name="" class="form-control" id="">
+                    <input type="date" class="form-control" id="" formControlName="birthDate">
                     
                   </div>
                   <div class="col ">
                     <label for="Gender" class="fw-bold">Gender :</label>
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault1">
-                      <label class="form-check-label" for="flexRadioDefault1">
-                        Male
-                      </label>
-                    </div>
-                    <div class="form-check">
-                      <input class="form-check-input" type="radio" name="flexRadioDefault" id="flexRadioDefault2" checked>
+                    <div class="row">
+
+                      <div class="form-check col">
+                        <input class="form-check-input" type="radio" value="Male" id="flexRadioDefault1" formControlName="gender">
+                        <label class="form-check-label" for="flexRadioDefault1">
+                          Male
+                        </label>
+                      </div>
+                         
+                    <div class="form-check col">
+                      <input class="form-check-input" type="radio" value="Female" id="flexRadioDefault2"  formControlName="gender">
                       <label class="form-check-label" for="flexRadioDefault2">
                         Female
                       </label>
                     </div>
-
+                  </div>
                   </div>
                 </div>
-            </form>
-        </div>
-        <div class="modal-footer">
+                <div class="row my-2">
+                  <select class="form-select" formControlName="education">
+                    <option *ngFor="let val of educationOptions 
+                    let i=index"
+                    value="{{val}}"> {{val | titlecase}}</option>
+                  
+                  </select>
+                </div>
+                <label class="m-3 mt-3 fw-bold" for="">Job Info</label>
+                <div class="row">
+                  <input type="text" class="form-control" id="" placeholder="Company Name" formControlName="companyName">
+                </div>
+                <div class="row my-2">
+                  <div class="col">
+                    <input type="number" class="form-control"  id="" placeholder="Experience" formControlName="experience">
+                  </div>
+                  <div class="col">
 
-          <button type="button" class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close">Insert</button>
-        </div>
+                    <input type="number" class="form-control"  id="" placeholder="Salary in LPA" formControlName="salary">
+                  </div>
+                </div>
+                <div class="modal-footer">
+                  <button  class="btn btn-primary" data-bs-dismiss="modal" aria-label="Close" type="submit">Insert</button>
+                </div>
+              </form>
+              </div>
+           
       </div>
     </div>
   </div>

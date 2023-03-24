@@ -1,0 +1,103 @@
+{
+  "myDatabase": [
+    {
+      "firstName": "darshil",
+      "lastName": "jadav",
+      "birthDate": "06/06/2022",
+      "gender": "male",
+      "education": "PHD",
+      "companyName": "google",
+      "experience": 0,
+      "salary": 4,
+      "id": 1
+    },
+    {
+      "firstName": "darsh",
+      "lastName": "yagmi",
+      "birthDate": "01/01/2021",
+      "gender": "male",
+      "education": "PHD",
+      "companyName": "yahoo",
+      "experience": 3,
+      "salary": 2,
+      "id": 2
+    },
+    {
+      "firstName": "light",
+      "lastName": "L",
+      "birthDate": "07/07/2021",
+      "gender": "male",
+      "education": "PHD",
+      "companyName": "tokyo",
+      "experience": 13,
+      "salary": 12,
+      "id": 3
+    },
+    {
+      "firstName": "sa",
+      "lastName": "asd",
+      "birthDate": "2023-03-01",
+      "gender": "Male",
+      "education": "diploma",
+      "companyName": "sad",
+      "experience": 3,
+      "salary": 333,
+      "id": 4
+    },
+    {
+      "firstName": "sa",
+      "lastName": "asd",
+      "birthDate": "2023-03-01",
+      "gender": "Male",
+      "education": "diploma",
+      "companyName": "sad",
+      "experience": 3,
+      "salary": 333,
+      "id": 5
+    },
+    {
+      "firstName": "sa",
+      "lastName": "asd",
+      "birthDate": "2023-03-01",
+      "gender": "Male",
+      "education": "diploma",
+      "companyName": "sad",
+      "experience": 3,
+      "salary": 333,
+      "id": 6
+    },
+    {
+      "firstName": "rajesh",
+      "lastName": "mahida",
+      "birthDate": "2002-02-12",
+      "gender": "Male",
+      "education": "10th pass",
+      "companyName": "instagram",
+      "experience": 6,
+      "salary": 5,
+      "id": 7
+    },
+    {
+      "firstName": "raju",
+      "lastName": "shyam",
+      "birthDate": "0022-02-01",
+      "gender": "Male",
+      "education": "diploma",
+      "companyName": "pintrest",
+      "experience": 1,
+      "salary": 1,
+      "id": 8
+    },
+    {
+      "firstName": "vitrag",
+      "lastName": "jasani",
+      "birthDate": "2023-02-28",
+      "gender": "Male",
+      "education": "PHD",
+      "companyName": "tatvasoft",
+      "experience": 3,
+      "salary": 3,
+      "id": 9
+    }
+  ]
+}
